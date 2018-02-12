@@ -1,0 +1,27 @@
+mixin logo(isLink, isHeader)
+  if isLink
+    +b("a")(href="/").logo&attributes(attributes)
+      +e.inner
+        if isHeader
+          +e.logo-icon
+            +e("img")(src="img/logo-header-icon.svg" alt="baltzabor")
+          +e.logo-word
+            +e("img")(src="img/logo-header-word.svg" alt="baltzabor")
+        else
+          +e.logo-icon
+            +e("img")(src="img/logo-footer-icon.svg" alt="baltzabor")
+          +e.logo-word
+            +e("img")(src="img/logo-footer-word.svg" alt="baltzabor")
+  else
+    +b.logo&attributes(attributes)
+      +e.inner
+        if isHeader
+          +e.logo-icon
+            +e("img")(src="img/logo-header-icon.svg" alt="baltzabor")
+          +e.logo-word
+            +e("img")(src="img/logo-header-word.svg" alt="baltzabor")
+        else
+          +e.logo-icon
+            +e("img")(src="img/logo-footer-icon.svg" alt="baltzabor")
+          +e.logo-word
+            +e("img")(src="img/logo-footer-word.svg" alt="baltzabor")

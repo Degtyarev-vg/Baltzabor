@@ -1,0 +1,40 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/button/button.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.button {
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  font-family: @pfsquaresanspro-bold;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #eeeff7;
+  text-align: center;
+  text-decoration: none;
+  transition: @transition;
+  padding: 10px 20px;
+  min-width: 160px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &_red {
+    background-color: #f33e2b;
+    &:hover {
+      background-color: darken(#f33e2b, 15%);
+    }
+  }
+
+  &_blue {
+    background-color: #435777;
+    &:hover {
+      background-color: darken(#435777, 15%);
+    }
+  }
+
+}

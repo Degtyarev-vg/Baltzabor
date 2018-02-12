@@ -1,0 +1,24 @@
+mixin section-prices()
+  +b("section").section-prices&attributes(attributes)
+    .grid.clearfix
+      +e.left
+        +b("h2").heading.__heading Лучшие цены
+        +e("p").subheading Почти 80% клиентов выбирают типовые комплектации заборов, не переплачивая за особые технологические решения и нестандартные материалы. Если вам нужен просто забор - эти предложения для вас. Но помните, ничто не ограничивает Вашу фантазию!
+      +e.right
+        +e.list
+          - let i = 1;
+          each item in pricePackages
+            +e("div")(class="item" + ((i == 2) ? "_slide-prev" : "" ) class='' + ((i == 3) ? '_slide-next' : '' ))
+              +b.price-package(style="background:url('" + item.img + "') center no-repeat;background-size:cover")
+                +e("h3").name !{item.name}
+                +e.old-price !{item.oldPrice}
+                +e.price !{item.price}
+                  +e("span").ruble
+                +e("p").for-what за погонный метр
+                +e("ul").parameters
+                  each parameter in item.parameters
+                    +e("li").parameter= parameter
+                +b("a")(href="#package" + i).button._red.__button.popup-with-zoom-anim Заказать
+                +popup-price(item.name, item.oldPrice, item.price, item.parameters, item.img, i)(id="package" + i)
+            - i++;
+        +e.navigation

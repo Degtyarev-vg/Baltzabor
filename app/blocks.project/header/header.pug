@@ -1,0 +1,13 @@
+mixin header(isMain)
+  +b("header").header&attributes(attributes)
+    +e.top-wrapper
+      +e.top
+        +e.top-inner
+          +hamburger.__hamburger
+          if isMain
+            +logo(false, true).__logo
+          else
+            +logo(true, true).__logo
+          +top-menu.__top-menu
+          +phones-block._desktop
+    block

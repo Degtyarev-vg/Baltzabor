@@ -1,0 +1,34 @@
+mixin footer-inner()
+  +b.footer-inner&attributes(attributes)
+    .grid
+      .row
+        +e.col._menu
+          +e("nav").menu
+            +e("h3").menu-title Заборы под ключ
+            +e("ul").menu-list
+              +e("li").menu-item._active
+                +e("a")(href="#").menu-link Из профлиста
+              +e("li").menu-item
+                +e("a")(href="#").menu-link Из поликарбоната
+              +e("li").menu-item
+                +e("a")(href="#").menu-link Из металлического штакетника
+              +e("li").menu-item
+                +e("a")(href="#").menu-link С кирпичными столбами
+              +e("li").menu-item
+                +e("a")(href="#").menu-link Из сварной сетки Gitter
+              +e("li").menu-item
+                +e("a")(href="#").menu-link На ленточном фундаменте
+              +e("li").menu-item
+                +e("a")(href="#").menu-link Из сетки рабицы
+              +e("li").menu-item
+                +e("a")(href="#").menu-link С применением декора
+              +e("li").menu-item
+                +e("a")(href="#").menu-link Из дерева
+        +e.col._contacts
+          +e("h3").menu-title._contacts Контакты
+          +contacts-block.__contacts-block
+        +e.col._logo
+          +logo(true, false).__logo
+          +socials.__socials
+
+    +to-top

@@ -1,0 +1,12 @@
+mixin section-advantages()
+  +b.section-advantages&attributes(attributes)
+    .grid
+      .row
+        - let i = 1;
+        each advantage in advantages
+          +e.item
+            +b.advantage
+              +e("span")(class="number" + ((i == 3) ? "_big" : ""))= i
+              +e("h3").title !{advantage.title}
+              +e("p").text !{advantage.text}
+          - i++;

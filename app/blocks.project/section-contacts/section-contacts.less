@@ -1,0 +1,89 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/section-contacts/section-contacts.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.section-contacts {
+  padding-top: 20px;
+  @media (max-width: 991px) {
+    padding-top: 10px;
+  }
+
+  &__container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    padding-top: 40px;
+    @media (max-width: 991px) {
+      display: block;
+      padding-top: 30px;
+    }
+  }
+
+  &__left, &__right {
+    flex-shrink: 1;
+  }
+  &__left {
+    width: 60%;
+    padding-right: 30px;
+    @media (max-width: 991px) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 45px;
+    }
+  }
+  &__right {
+    width: 40%;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+
+  &__form {
+    border: 5px solid #435777;
+    padding: 30px 15px;
+    font-size: 0;
+    @media (max-width: 767px) {
+      padding: 20px 25px;
+    }
+  }
+
+  &__col {
+    margin-bottom: 35px;
+    padding: 0 15px;
+    text-align: left;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+    &_50 {
+      display: inline-block;
+      width: 50%;
+      @media (max-width: 767px) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    margin-left: 15px;
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
+
+  &__map {
+    margin-top: 55px;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    @media (max-width: 991px) {
+      margin-top: 45;
+      height: 300px;
+    }
+  }
+
+}

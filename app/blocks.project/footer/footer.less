@@ -1,0 +1,100 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/footer/footer.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.footer {
+  background-color: #1c1d21;
+  padding: 45px 0;
+  color: #9597a2;
+  font-size: 0;
+
+  &__col {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+    font-size: 16px;
+    &_logo {
+      width: 27%;
+      padding-top: 20px;
+    }
+    &_menu {
+      width: 46%;
+      padding-top: 20px;
+    }
+    &_contacts {
+      width: 27%;
+    }
+    @media (max-width: 1199px) {
+      &_logo {
+        width: 28%;
+      }
+      &_menu {
+        width: 32%;
+      }
+      &_contacts {
+        width: 40%;
+      }
+    }
+    @media (max-width: 767px) {
+      display: block;
+      &_logo {
+        width: 100%;
+        padding-top: 0;
+      }
+      &_menu {
+        width: 100%;
+        padding-top: 30px;
+      }
+      &_contacts {
+        width: 100%;
+        padding-top: 40px;
+      }
+    }
+  }
+
+  &__socials {
+    margin-top: 30px;
+  }
+
+  &__menu-title {
+    font-family: @pfsquaresanspro-bold;
+    font-size: 18px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+
+  &__menu-list {
+    font-size: 0;
+    margin-top: 10px;
+  }
+
+  &__menu-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin: 5px 0;
+    @media (max-width: 1199px) {
+      display: block;
+      width: 100%;
+    }
+    &_active {
+      .footer__menu-link {
+        color: #f33e2b;
+      }
+    }
+  }
+
+  &__menu-link {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #9a9c9f;
+    text-decoration: none;
+    transition: @transition;
+    &:hover {
+      color: #f33e2b;
+    }
+  }
+
+}

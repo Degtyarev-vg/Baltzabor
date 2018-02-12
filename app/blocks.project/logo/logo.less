@@ -1,0 +1,38 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/logo/logo.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.logo {
+  display: inline-block;
+  font-size: 0;
+
+  &__inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-icon, &__logo-word {
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+
+  &__logo-icon {
+    margin-right: 13px;
+    transition: all ease 1s;
+  }
+
+  &:hover {
+    .logo__logo-icon {
+      transform-origin: 50% 50%;
+      //transform: rotate(360deg);
+      transform: scaleX(-1);
+    }
+  }
+
+}

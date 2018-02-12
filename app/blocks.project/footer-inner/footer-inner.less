@@ -1,0 +1,198 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/footer-inner/footer-inner.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.footer-inner {
+  background-color: #1c1d21;
+  padding: 45px 0;
+  color: #9597a2;
+  font-size: 0;
+  @media (max-width: 767px) {
+    padding: 35px 0;
+  }
+
+  .row {
+    position: relative;
+    @media (max-width: 767px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__col {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+    position: relative;
+    font-size: 16px;
+    &_menu {
+      width: 46%;
+      padding-top: 20px;
+      left: 27%;
+    }
+    &_contacts {
+      width: 27%;
+      left: 27%;
+    }
+    &_logo {
+      width: 27%;
+      padding-top: 20px;
+      right: 73%;
+    }
+    @media (max-width: 1199px) {
+      &_menu {
+        width: 60%;
+        left: 0;
+        padding-top: 60px;
+      }
+      &_contacts {
+        width: 40%;
+        left: 0;
+      }
+      &_logo {
+        padding-top: 0;
+        width: 60%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    @media (max-width: 767px) {
+      display: block;
+      padding: 0;
+      &_menu {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #2d2d31;
+      }
+      &_contacts {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #2d2d31;
+      }
+      &_logo {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-top: 33px;
+        right: auto;
+      }
+    }
+  }
+
+  &__logo {
+    @media (max-width: 1199px) {
+      display: inline-block;
+      vertical-align: top;
+    }
+    @media (max-width: 479px) {
+      display: block;
+    }
+  }
+
+  &__socials {
+    margin-top: 30px;
+    @media (max-width: 1199px) {
+      display: -webkit-inline-flex;
+      display: -moz-inline-flex;
+      display: -ms-inline-flex;
+      display: -o-inline-flex;
+      display: inline-flex;
+      margin: 3px 0 0 35px;
+    }
+    @media (max-width: 479px) {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      margin: 25px 0 0 0;
+    }
+  }
+
+  &__menu-title {
+    font-family: @pfsquaresanspro-bold;
+    font-size: 18px;
+    font-weight: normal;
+    color: #ffffff;
+    position: relative;
+    @media (max-width: 767px) {
+      cursor: pointer;
+      padding-right: 35px;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 17px;
+        height: 16px;
+        width: 8px;
+        background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2210%22%20width%3D%225.701%22%20viewBox%3D%220%200%205.7011776%2010%22%3E%3Cpath%20d%3D%22M5.496%205.495l-4.3%204.3a.7.7%200%200%201-.991-.99L4.01%205%20.206%201.196a.7.7%200%200%201%20.99-.99l4.3%204.3a.696.696%200%200%201%200%20.99zm0%200%22%20fill%3D%22%23ffffff%22%2F%3E%3C%2Fsvg%3E") center no-repeat;
+        background-size: contain;
+      }
+    }
+    &_contacts {
+      display: none;
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+    &_open {
+      &:after {
+        transform: rotate(90deg);
+        height: 8px;
+        width: 16px;
+      }
+    }
+  }
+
+  &__menu-list {
+    font-size: 0;
+    margin-top: 10px;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__menu-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin: 5px 0;
+    @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+    }
+    &_active {
+      .footer__menu-link {
+        color: #f33e2b;
+      }
+    }
+  }
+
+  &__menu-link {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #9a9c9f;
+    text-decoration: none;
+    transition: @transition;
+    &:hover {
+      color: #f33e2b;
+    }
+  }
+
+  &__contacts-block {
+    @media (max-width: 767px) {
+      display: none;
+      margin-top: 10px;
+      .contacts-block__inner {
+        display: block;
+      }
+      .contacts-block__title {
+        display: none;
+      }
+    }
+  }
+
+}

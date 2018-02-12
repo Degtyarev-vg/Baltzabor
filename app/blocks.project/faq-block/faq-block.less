@@ -1,0 +1,208 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/faq-block/faq-block.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.faq-block {
+
+  &__options {
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__option {
+    flex-shrink: 1;
+    margin: 0 16px 20px;
+    &_active {
+      .faq-block__btn {
+        color: #f33e2b;
+        &:before {
+          width: 34px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    font-size: 14px;
+    color: #3e3e3e;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: @transition;
+    position: relative;
+    &:before {
+      content: "";
+      background-color: #f33e2b;
+      transition: @transition;
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      height: 2px;
+      width: 0;
+    }
+    &_reset {
+      background-color: #9597a2;
+      color: #ffffff !important;
+      padding: 15px 50px 15px 45px;
+      &:before {
+        display: none;
+      }
+      &:hover {
+        color: #ffffff;
+        background-color: #f33e2b;
+      }
+    }
+    &:hover {
+      color: #f33e2b;
+      &:before {
+        width: 34px;
+      }
+    }
+  }
+
+  &__x {
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 33px;
+    transform: rotate(45deg);
+    height: 1px;
+    width: 10px;
+    background-color: #ffffff;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: rotate(-90deg) translateX(-50%);
+      transform-origin: top left;
+      height: 1px;
+      width: 10px;
+      background-color: #ffffff;
+    }
+  }
+
+  &__content {
+    margin: 0 -15px;
+    text-align: left;
+    font-size: 0;
+    @media (max-width: 991px) {
+      max-width: 556px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+    margin-top: 35px;
+    width: 50%;
+    @media (max-width: 991px) {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+    @media (max-width: 767px) {
+      margin-top: 20px;
+    }
+    &_open {
+      .faq-block__title {
+        border-bottom: 0;
+        &:after {
+          content: "";
+          background-color: #d7d7d7;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 1px;
+          width: calc(~"100% - 34px");
+        }
+      }
+      .faq-block__open-close {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    border: 1px solid #d7d7d7;
+    font-family: @pfsquaresanspro-medium;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 24px;
+    color: #3e3e3e;
+    text-decoration: none;
+    padding: 14px 85px 14px 20px;
+    position: relative;
+    @media (max-width: 767px) {
+      padding: 14px 75px 14px 15px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 72px;
+      transform: translateY(-50%);
+      background-color: #d7d7d7;
+      height: 60%;
+      width: 1px;
+      @media (max-width: 767px) {
+        right: 60px;
+      }
+    }
+  }
+
+  &__open-close {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 31px;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 10px;
+    background-color: #f33e2b;
+    @media (max-width: 767px) {
+      right: 25px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: rotate(-90deg) translateX(-50%);
+      transform-origin: top left;
+      height: 1px;
+      width: 10px;
+      background-color: #f33e2b;
+    }
+  }
+
+  &__text {
+    display: none;
+    border: 1px solid #d7d7d7;
+    border-top: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 24px;
+    color: #3e3e3e;
+    padding: 14px 20px;
+    @media (max-width: 767px) {
+      padding: 14px 15px;
+    }
+  }
+
+}

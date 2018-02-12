@@ -1,0 +1,32 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/section-advantages/section-advantages.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.section-advantages {
+  background: url("../img/section-advantages-bg.jpg") center no-repeat;
+  background-size: cover;
+  font-size: 0;
+  text-align: center;
+  padding: 50px 0;
+  overflow: hidden;
+  @media (max-width: 767px) {
+    background: url("../img/section-advantages-bg_mobile.jpg") center no-repeat;
+    background-size: cover;
+    padding: 25px 0;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 15px;
+    width: 33.3333333%;
+    @media (max-width: 767px) {
+      display: block;
+      padding: 15px;
+      width: 100%;
+    }
+  }
+
+}

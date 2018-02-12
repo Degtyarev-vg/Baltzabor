@@ -1,0 +1,59 @@
+mixin popup-price(name, oldPrice, price, objParameters, img, i)
+  +b.popup-price.zoom-anim-dialog.mfp-hide&attributes(attributes)
+    if img
+      +e.top(style="background:url('" + img + "') center no-repeat;background-size:cover")
+        +e.left
+          +e("h3").name !{name}
+          +e.old-price !{oldPrice}
+          +e.price !{price}
+            +e("span").ruble
+          +e("p").for-what за погонный метр
+        +e.right
+          +e("ul").parameters
+            each parameter in objParameters
+              +e("li").parameter= parameter
+          +b("a")(href="#").button._blue Другие варианты
+    else
+      +e.top
+        +e.left
+          +e("h3").name !{name}
+          +e.old-price !{oldPrice}
+          +e.price !{price}
+            +e("span").ruble
+          +e("p").for-what за погонный метр
+        +e.right
+          +e("ul").parameters
+            each parameter in objParameters
+              +e("li").parameter= parameter
+          +b("a")(href="#").button._blue Другие варианты
+    +e.content
+      +e("h3").heading Заполните форму
+      +e("form")(action="#" method="post" enctype="multipart/form-data" autocomplete="off").form.form-validation
+        +e.col._50
+          +label("name" + i, "Имя")._required-gray
+          .form-validation__group
+            +b("input")(type="text" name="name" id="name" + i).input._solid._name.__input.validation._minlength
+        +e.col._50
+          +label("phone" + i, "Телефон")
+          .form-validation__group
+            +b("input")(type="text" name="phone" id="phone" + i).input._solid._phone.mask._phone.__input.validation
+        +e.col._50
+          +label("email" + i, "Email")._required-gray
+          .form-validation__group
+            +b("input")(type="email" name="email" id="email" + i).input._solid._email.__input.validation._email
+        +e.col._50
+          +label("width" + i, "Длина забора, М.П.")._required-gray
+          .form-validation__group
+            +b("input")(type="text" name="width" id="width" + i).input._solid._ruler.__input.validation._digits
+        +e.col
+          +label("text" + i, "Ваш комментарий")
+          .form-validation__group
+            +b("textarea")(name="text" id="text" + i).input._solid._textarea.__input.validation._minlength
+        +e.col
+          +label("file" + i, "Прикрепите фото участка и (или) техническое задание")
+          +b.input-file._solid
+            +e("input")(type="file" name="file" multiple required id="file" + i).input
+            +e("label")(for="file" + i).label
+              +e("span").field
+              +e.button Обзор
+        +b("input")(type="submit" value="Отправить").button._red.__button

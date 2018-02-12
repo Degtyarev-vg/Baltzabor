@@ -1,0 +1,23 @@
+mixin section-issues()
+  +b("section").section-issues&attributes(attributes)
+    .grid
+      +e.search-block
+        +b("h1").heading.__heading Справочный центр
+        +e.search-input-block
+          +label("search", "Введите ключевые слова в поисковое поле...")._no-left-offset
+          +b("input")(type="text" name="search" id="search").input._solid
+      +e.main
+        - var i = 1;
+        each block in issues
+          +e.item._desktop._mobile
+            +e("p").block !{block.title}
+            +e.questions
+              - var j = 1;
+              each question in block.questions
+                +e("a")(class="question" + ((i == 1 && j == 1) ? "_active" : "") href="#tab" + i + "-" + j) !{question.title}
+                +e(class="content" + ((i == 1 && j == 1) ? "_open" : "") id="tab" + i + "-" + j)
+                  +e("h2").header !{question.title}
+                  +e.text !{question.content}
+                - j++;
+          - i++;
+      +e.for-content

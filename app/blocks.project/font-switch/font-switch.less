@@ -1,0 +1,33 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/font-switch/font-switch.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.font-switch {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  &__button {
+    background-color: #9597a2;
+    display: block;
+    font-size: 12px;
+    line-height: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    &_plus {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+    &_active {
+      background-color: #f33e2b;
+    }
+  }
+
+}

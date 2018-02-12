@@ -1,0 +1,15 @@
+mixin section-reviews()
+  +b("section").section-reviews&attributes(attributes)
+    .grid
+      +b("h2").heading.__heading Отзывы наших клиентов
+      +e.container
+        +e.slider
+          each item in reviews
+            +e.item
+              +e.content
+                +e.img(style="background:url(" + item.img + ") center no-repeat;background-size:cover")
+                +e.info
+                  +e.img-mobile(style="background:url(" + item.img + ") center no-repeat;background-size:cover")
+                  +e("h4").author !{item.info}
+                  +e("p").text !{item.text}
+        +e.navigation

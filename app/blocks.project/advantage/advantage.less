@@ -1,0 +1,49 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/advantage/advantage.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.advantage {
+  display: inline-block;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #3e3e3e;
+  padding-top: 30px;
+  position: relative;
+  max-width: 230px;
+  min-height: 138px;
+  vertical-align: top;
+
+  &__number {
+    font-family: @raleway-extrabold;
+    font-size: 222px;
+    line-height: 106px;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    &_big {
+      font-size: 190px;
+      line-height: 94px;
+    }
+  }
+
+  &__title, &__text {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-family: @pfsquaresanspro-bold;
+    font-size: 30px;
+    font-size: 3rem;
+    line-height: 36px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+}

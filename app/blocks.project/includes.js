@@ -1,0 +1,16 @@
+//= include ../blocks/includes.js
+//= include header/header.js
+//= include hamburger/hamburger.js
+//= include top-menu/top-menu.js
+//= include font-switch/font-switch.js
+//= include faq-block/faq-block.js
+//= include section-reviews/section-reviews.js
+//= include section-works/section-works.js
+//= include section-prices/section-prices.js
+//= include input-file/input-file.js
+//= include validation/validation.js
+//= include mask/mask.js
+//= include to-top/to-top.js
+//= include footer-inner/footer-inner.js
+//= include section-issues/section-issues.js
+//= include map-leave/map-leave.js

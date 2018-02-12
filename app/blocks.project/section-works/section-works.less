@@ -1,0 +1,77 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/section-works/section-works.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.section-works {
+  overflow: hidden;
+  padding: 40px 0;
+  text-align: center;
+
+  &__container {
+    position: relative;
+    font-size: 0;
+    margin-top: 70px;
+    @media (max-width: 991px) {
+      margin-top: 50px;
+    }
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__slider-container {
+    float: left;
+    font-size: 0;
+    width: calc(~"100% - 458px");
+    position: relative;
+    left: 458px;
+  }
+
+  &__previews-container {
+    float: left;
+    font-size: 0;
+    width: 458px;
+    padding-right: 98px;
+    position: relative;
+    right: calc(~"100% - 458px");
+  }
+
+  &__img, &__img-previews {
+    display: none !important;
+  }
+
+  &__item {
+    display: block;
+    height: 458px;
+    overflow: hidden;
+  }
+
+  &__slider-previews {
+    height: 458px;
+    overflow: hidden;
+    /* .slick-slide {
+      > div {
+        display: inline-block;
+        width: 49%;
+      }
+    } */
+    .slick-current {
+      border: 3px solid red;
+    }
+    .slick-active img {
+      border: 3px solid red;
+    }
+  }
+
+  &__item-previews {
+    height: 125px !important;
+    overflow: hidden;
+    margin-bottom: 36px;
+    position: relative;
+    cursor: pointer;
+    // width: 50% !important;
+  }
+
+}

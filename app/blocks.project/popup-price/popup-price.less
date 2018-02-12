@@ -1,0 +1,125 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/popup-price/popup-price.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.popup-price {
+  background-color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  max-width: 635px;
+  width: 100%;
+
+  &__top {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    color: #3e3e3e;
+    @media (max-width: 479px) {
+      display: block;
+    }
+  }
+
+  &__left, &__right {
+    padding: 25px 15px 40px;
+    width: 50%;
+    @media (max-width: 479px) {
+      padding: 15px;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-family: @pfsquaresanspro-bold;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__old-price {
+    font-size: 26px;
+    line-height: 26px;
+    text-decoration: line-through;
+    margin-top: 10px;
+  }
+
+  &__price {
+    display: inline-block;
+    font-size: 72px;
+    line-height: 50px;
+    position: relative;
+    margin: 15px 0 10px;
+  }
+
+  &__ruble {
+    position: absolute;
+    top: -8px;
+    left: -18px;
+    height: 17px;
+    width: 16px;
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2217%22%20width%3D%2211.258%22%20viewBox%3D%220%200%2011.25814%2017%22%3E%3Cpath%20d%3D%22M3.287%2016.235a.764.764%200%200%201-.765.765.763.763%200%200%201-.765-.765v-2.473H.765a.766.766%200%200%201%200-1.53h.992v-1.73H.765a.766.766%200%200%201%200-1.53h.992V.976c0-.398.303-.726.692-.762%203.565-.524%205.723-.034%207.01.903%201.393%201.01%201.773%202.482%201.797%203.822.04%202.023-.636%203.425-1.857%204.33-1.163.867-2.788%201.234-4.726%201.234H3.287v1.729h3.33a.766.766%200%200%201%200%201.53h-3.33zm0-14.589v7.327h1.386c1.622%200%202.942-.276%203.817-.928.817-.609%201.27-1.6%201.242-3.081-.018-.94-.263-1.953-1.169-2.61-.927-.674-2.543-1.032-5.276-.708z%22%20fill%3D%22%233e3e3e%22%2F%3E%3C%2Fsvg%3E") center no-repeat;
+    background-size: contain;
+  }
+
+  &__for-what {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__parameters {
+    margin-bottom: 15px;
+  }
+
+  &__parameter {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px 0;
+  }
+
+  &__content {
+    padding: 35px 80px;
+    @media (max-width: 767px) {
+      padding: 20px 15px;
+    }
+  }
+
+  &__heading {
+    font-family: @pfsquaresanspro-bold;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+    color: #3e3e3e;
+  }
+
+  &__form {
+    font-size: 0;
+    margin-top: 15px;
+  }
+
+  &__col {
+    margin-bottom: 15px;
+    padding: 0 7px;
+    text-align: left;
+    @media (max-width: 767px) {
+      padding: 0 15px;
+    }
+    &_50 {
+      display: inline-block;
+      width: 50%;
+      @media (max-width: 767px) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+
+}

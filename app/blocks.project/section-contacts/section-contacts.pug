@@ -1,0 +1,33 @@
+mixin section-contacts()
+  +b("section").section-contacts&attributes(attributes)
+    .grid
+      +b("h1").heading.__heading Контакты
+      +e.container
+        +e.left
+          +e("form")(action="#" method="post" autocomplete="off").form.form-validation
+            +e.col._50
+              +label("name", "Ваше имя")._required-red._no-left-offset._bold
+              .form-validation__group
+                +b("input")(type="text" name="name").input._bottom._name#name.__input.validation._minlength
+            +e.col._50
+              +label("email", "Email")._required-red._no-left-offset._bold
+              .form-validation__group
+                +b("input")(type="email" name="email").input._bottom._email#email.__input.validation._email
+            +e.col._50
+              +label("phone", "Номер телефона")._no-left-offset._bold
+              .form-validation__group
+                +b("input")(type="text" name="phone").input._bottom._phone.mask._phone#phone.__input.validation
+            +e.col._50
+              +label("time", "Удобное время звонка")._no-left-offset._bold
+              .form-validation__group
+                +b("input")(type="text" name="time").input._bottom._time.mask._time#time.__input.validation._minlength
+            +e.col
+              +label("text", "Ваше сообщение")._required-red._no-left-offset._bold
+              .form-validation__group
+                +b("textarea")(name="text" placeholder="Можно написать сообщения длиной 2 строки").input._bottom._textarea_bottom#text.__input.validation._minlength
+            +b("input")(type="submit" value="Отправить").button._red.__button
+        +e.right
+          +contacts.__contacts
+    +e.map
+      +map-leave.__map-leave
+      script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A36b8fd1c8001f21a63d4250846074dae8f7f13a65600412cc8e79f28f7a4c33a&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")

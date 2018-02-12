@@ -1,0 +1,160 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/header/header.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.header {
+
+  &__top-wrapper {
+    min-height: 107px;
+    @media (max-width: 1199px) {
+      min-height: auto;
+    }
+  }
+
+  &__top {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    animation: 1s ease;
+    z-index: 999;
+    &_sticky {
+      border-bottom-color: transparent;
+      box-shadow: 0px 11px 40px 0px rgba(1, 1, 1, 0.07);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      animation-name: fade_in_down;
+      @media (max-width: 1199px) {
+        position: static;
+        animation-name: none;
+      }
+    }
+  }
+
+  &__top-inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 33px 15px;
+    position: relative;
+    @media (max-width: 1199px) {
+      width: 970px;
+    }
+    @media (max-width: 991px) {
+      width: 750px;
+      padding: 20px 15px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    @media (max-width: 1199px) {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+    }
+    @media (max-width: 767px) {
+      top: 10px;
+      left: auto;
+      right: 15px;
+      transform: translateY(0);
+    }
+    @media (max-width: 479px) {
+      top: 15px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    @media (max-width: 1199px) {
+      max-width: 240px;
+      margin-left: 105px;
+    }
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+    @media (max-width: 479px) {
+      max-width: 150px;
+    }
+  }
+
+  &__top-menu {
+    @media (max-width: 1199px) {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    @media (max-width: 767px) {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__phones-block {
+    flex-shrink: 1;
+  }
+
+  &__bottom {
+    text-align: center;
+    padding-top: 50px;
+    color: #3e3e3e;
+    @media (max-width: 767px) {
+      padding-top: 20px;
+    }
+  }
+
+  &__header {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: normal;
+    @media (max-width: 767px) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+    @media (max-width: 479px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__subheader {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: normal;
+    @media (max-width: 767px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    @media (max-width: 479px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+}
+
+@keyframes fade_in_down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

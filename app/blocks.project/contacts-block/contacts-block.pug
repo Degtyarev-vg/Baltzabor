@@ -1,0 +1,15 @@
+mixin contacts-block()
+  +b.contacts-block&attributes(attributes)
+    +e.inner
+      +e("h3").title Наш адрес
+      +e.item._address
+        +e("p").item-inner !{contacts.address}
+      +e.item._phone
+        +e("a")(href="tel:79219046435").item-inner._hover !{contacts.phone1}
+        | или
+        br
+        +e("a")(href="tel:78124081703").item-inner._hover !{contacts.phone2}
+      +e.item._email
+        +e("a")(href="mailto:" + contacts.email).item-inner._hover !{contacts.email}
+      +e.item
+        +e("p").item-inner !{contacts.time}
