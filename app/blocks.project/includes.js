@@ -14,3 +14,16 @@
 //= include footer-inner/footer-inner.js
 //= include section-issues/section-issues.js
 //= include map-leave/map-leave.js
+//= include section-gallery/section-gallery.js
+//= include custom-select/custom-select.js
+//= include tooltip/tooltip.js
+//= include service-slider/service-slider.js
+//= include section-services/section-services.js
+//= include section-calculator/section-calculator.js
+//= include side-item/side-item.js
+//= include keypad/keypad.js
+//= include link-scroll/link-scroll.js
+//= include visualizer/visualizer.js
+//= include inner-prices/inner-prices.js
+//= include inner-works/inner-works.js
+//= include infographic/infographic.js

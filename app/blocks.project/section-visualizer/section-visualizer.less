@@ -1,0 +1,22 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/section-visualizer/section-visualizer.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.section-visualizer {
+  padding: 15px 0 25px;
+
+  &__subheading {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #3e3e3e;
+    margin-top: 10px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+
+}

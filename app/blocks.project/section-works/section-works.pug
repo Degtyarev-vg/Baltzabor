@@ -5,13 +5,17 @@ mixin section-works(objWorks)
       +e.container.clearfix
         +e.slider-container
           +e.slider
+            - let i = 0;
             each item in objWorks
-              +e("a")(href="#").item
+              +e("a")(class="item" + "_" + i href="#")
                 +e("img")(src="" + item.img alt="" + item.alt width="640" height="360" data-thumb=item.preview).img
+              - i++;
+          +e.navigation
         +e.previews-container
           +e.slider-previews
+            - let j = 0;
             each item in objWorks
-              +e.item-previews
+              +e(class="item-previews" + "_" + j data-preview=j)
                 +e("img")(src="" + item.preview alt="" + item.alt width="272" height="153").img-previews
                 +e("span").relation
-        +e.navigation
+              - j++;

@@ -1,0 +1,64 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/inner-price-package/inner-price-package.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.inner-price-package {
+  background-color: #435777;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  @media (max-width: 767px) {
+    display: inline-block;
+    max-width: 346px;
+  }
+
+  &__top {
+    padding: 20px 10px;
+    color: #ffffff;
+  }
+
+  &__name {
+    font-family: @pfsquaresanspro-medium;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+
+  &__price {
+    font-family: @pfsquaresanspro-bold;
+    font-size: 35px;
+    line-height: 1.3;
+    margin: 5px 0 10px;
+  }
+
+  &__meter {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  &__parameters {
+    background-color: #ededed;
+  }
+
+  &__parameter {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #333333;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f4f4f4;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    @media (max-width: 767px) {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+
+  &__button-container {
+    padding: 25px 0;
+  }
+
+}

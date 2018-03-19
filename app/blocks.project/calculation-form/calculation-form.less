@@ -1,0 +1,86 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/calculation-form/calculation-form.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.calculation-form {
+  padding: 20px 0 30px;
+  text-align: center;
+  @media (max-width: 767px) {
+    text-align: left;
+  }
+
+  &__form {
+    border: 5px solid #435777;
+    padding: 15px 15px 40px;
+    font-size: 0;
+    text-align: left;
+    margin: 30px auto 0;
+    width: 825px;
+    @media (max-width: 991px) {
+      width: 720px;
+    }
+    @media (max-width: 767px) {
+      padding: 15px 20px 40px;
+      width: 100%;
+    }
+  }
+
+  &__col {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    vertical-align: top;
+    margin-top: 25px;
+    width: 100%;
+    @media (max-width: 767px) {
+      margin-top: 15px;
+      padding: 0;
+    }
+    &_4 {
+      width: 33.3333333%;
+      @media (max-width: 991px) {
+        width: 50%;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    &_45 {
+      width: 45%;
+      @media (max-width: 991px) {
+        width: 65%;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    &_push {
+      left: 45%;
+      @media (max-width: 991px) {
+        left: 0;
+      }
+    }
+    &_pull {
+      right: 33.3333333%;
+      @media (max-width: 991px) {
+        right: 0;
+      }
+    }
+    &_center {
+      text-align: center;
+    }
+  }
+
+  &__radio {
+    margin-right: 20px;
+    @media (max-width: 767px) {
+      margin-right: 25px;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+}

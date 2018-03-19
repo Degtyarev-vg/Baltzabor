@@ -1,0 +1,17 @@
+mixin popup-callback()
+  +b.popup-callback.zoom-anim-dialog.mfp-hide#popup-callback&attributes(attributes)
+    +e("form")(action="#" method="post" autocomplete="off").form.form-validation
+      +label("popup-name", "Имя")._required-red._no-left-offset
+      .form-validation__group
+        +b("input")(type="text" name="name").input._name._bottom#popup-name.__label.validation._minlength
+      +label("popup-email", "Email")._required-red._no-left-offset
+      .form-validation__group
+        +b("input")(type="email" name="email").input._email._bottom#popup-email.__label.validation._email
+      +label("popup-phone", "Телефон")._required-red._no-left-offset
+      .form-validation__group
+        +b("input")(type="text" name="phone").input._phone._bottom.mask._phone#popup-phone.__label.validation
+      +label("popup-text", "Ваше сообщение")._required-red._no-left-offset
+      .form-validation__group
+        +b("textarea")(name="text").input._textarea._textarea_bottom#popup-text.validation._minlength
+      +e.button-container
+        +b("input")(type="submit" value="Отправить").button._blue

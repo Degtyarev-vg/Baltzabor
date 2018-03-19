@@ -1,0 +1,41 @@
+mixin section-services()
+  +b("section").section-services&attributes(attributes)
+    .grid
+      +b("h2").heading.__heading Наши услуги - установка заборов
+        .grid
+      .row
+        +e.list
+          - let i = 1;
+          each item in services
+            if i > 1
+              +e.item
+                +b.service.__service
+                  +e.excerpt
+                    +e.excerpt-inner
+                      +e("h4").excerpt-title !{item.title}
+                      +e("p").description !{item.description}
+                    +b("a")(href="#").button._red.__button Подробнее
+                  +e.top
+                    +e("picture").picture
+                      +e("source")(type="image/webp" srcset="img/services/"+item.imgWebp+" 1x, img/services/"+item.imgWebpRetina+" 2x").source
+                      +e("img")(src="img/services/"+item.img srcset="img/services/"+item.imgRetina+" 2x" alt=item.title).img
+                    +e("h4").title !{item.title}
+            else
+              +e.item
+                +service-slider.__service-slider
+            - i++;
+        +e.slider
+          each item in servicesSlider
+            +e.slider-item
+              +b.service.__service
+                  +e.excerpt
+                    +e.excerpt-inner
+                      +e("h4").excerpt-title !{item.title}
+                      +e("p").description !{item.description}
+                    +b("a")(href="#").button._red.__button Подробнее
+                  +e.top
+                    +e("picture").picture
+                      +e("source")(type="image/webp" srcset="img/services/"+item.imgWebp+" 1x, img/services/"+item.imgWebpRetina+" 2x").source
+                      +e("img")(src="img/services/"+item.img srcset="img/services/"+item.imgRetina+" 2x" alt=item.title).img
+                    +e("h4").title !{item.title}
+      +e.navigation

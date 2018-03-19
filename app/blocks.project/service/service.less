@@ -1,0 +1,92 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/service/service.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.service {
+  position: relative;
+  min-height: 290px;
+  &:hover {
+    .service__excerpt {
+      opacity: 1;
+      transform: scale(1.2);
+      z-index: 3;
+    }
+  }
+
+  &__excerpt {
+    background-color: #435777;
+    padding: 25px 25px 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: @transition;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__excerpt-inner {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 20px;
+      background-image: linear-gradient(to right, rgba(67, 87, 119, 0), rgba(67, 87, 119, 1));
+    }
+  }
+
+  &__excerpt-title {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 26px;
+    color: #eeeff7;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+    color: #eeeff7;
+    padding: 15px 0;
+  }
+
+  &__button {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 2;
+    min-width: auto;
+  }
+
+  &__picture, &__source, &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #eeeff7;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+}

@@ -1,0 +1,59 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/radio/radio.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.radio {
+  display: inline-block;
+  font-size: 0;
+  text-align: left;
+
+  &__input {
+    display: none;
+    + .radio__label .radio__dot {
+      display: inline-block;
+      border: 2px solid #333333;
+      height: 20px;
+      width: 20px;
+      position: relative;
+    }
+    &:checked {
+      + .radio__label .radio__dot {
+        background-color: #f33e2b;
+        border-color: #f33e2b;
+      }
+      + .radio__label .radio__dot:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 5px;
+        display: block;
+        width: 7px;
+        height: 12px;
+        border: 0 solid #ffffff;
+        border-width: 0 2px 2px 0;
+        transform: rotateZ(45deg);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  &__text {
+    display: inline-block;
+    width: calc(~"100% - 20px");
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #000000;
+    padding-left: 15px;
+    vertical-align: top;
+  }
+
+}

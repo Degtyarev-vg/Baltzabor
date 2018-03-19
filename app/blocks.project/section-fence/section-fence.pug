@@ -1,0 +1,14 @@
+mixin section-fence()
+  +b("section").section-fence&attributes(attributes)
+    .grid
+      +b("h2").heading !{sectionFence.heading}
+      +e("p").subheading !{sectionFence.subheading}
+    .grid.grid_no-sm-padding
+      +scroll-menu.__scroll-menu
+    .grid
+      +e.container
+        each item in sectionFence.list
+          +e.item
+            +e("h4").title
+              +e("span").title-text !{item.title}
+            +e("p").text !{item.text}

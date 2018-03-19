@@ -1,0 +1,161 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/section-features/section-features.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.section-features {
+  padding: 15px 0 30px;
+
+  &__subheading {
+    font-family: @pfsquaresanspro-bold;
+    font-weight: normal;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1.3;
+    color: #3e3e3e;
+    margin: 15px 0;
+    @media (max-width: 767px) {
+      font-size: 22px;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #3e3e3e;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__list {
+    background-color: #ededed;
+    padding: 30px 40px;
+    margin-top: 25px;
+    counter-reset: numbersFeatures 0;
+    @media (max-width: 767px) {
+      padding: 30px 15px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &__title {
+    font-family: @pfsquaresanspro-medium;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    &_gray {
+      color: #3e3e3e;
+    }
+    &_white {
+      color: #ffffff;
+    }
+  }
+
+  &__item {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #333333;
+    position: relative;
+    padding-left: 60px;
+    min-height: 54px;
+    margin-bottom: 25px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @media (max-width: 767px) {
+      font-size: 16px;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      padding-left: 55px;
+    }
+    &:before {
+      counter-increment: numbersFeatures;
+      content: counter(numbersFeatures) "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      font-family: @pfsquaresanspro-medium;
+      font-size: 20px;
+      line-height: 40px;
+      width: 40px;
+      text-align: center;
+      background-color: #435777;
+      color: #ffffff;
+      @media (max-width: 767px) {
+        top: 5px;
+      }
+    }
+  }
+
+  &__certificate {
+    background-color: #435777;
+    padding: 30px 300px 30px 40px;
+    position: relative;
+    @media (max-width: 1199px) {
+      padding: 30px 240px 30px 40px;
+    }
+    @media (max-width: 767px) {
+      padding: 30px 15px 100px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #ffffff;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__watch {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    color: #ffffff;
+    text-decoration: underline;
+    padding-right: 83px;
+    @media (max-width: 767px) {
+      bottom: 30px;
+      right: auto;
+      left: 15px;
+      padding-right: 0;
+      padding-left: 65px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 70px;
+      width: 68px;
+      background: url("../img/certificate.png") center no-repeat;
+      background-size: contain;
+      @media (max-width: 767px) {
+        height: 50px;
+        width: 48px;
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+
+}

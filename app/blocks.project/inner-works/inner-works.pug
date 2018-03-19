@@ -1,0 +1,22 @@
+mixin inner-works()
+  +b("section").inner-works&attributes(attributes)
+    .grid
+      +b("h2").heading Примеры ограждений из металлоштакетника
+      +e("p").subheading Несколько примеров работ, выполненных нашей компанией:
+      +e.container.clearfix
+        +e.slider-container
+          +e.slider
+            - let i = 0;
+            each item in innerWorks
+              +e("a")(class="item" + "_" + i href="#")
+                +e("img")(src="" + item.img alt="" + item.alt width="640" height="360" data-thumb=item.preview).img
+              - i++;
+        +e.previews-container
+          +e.slider-previews
+            - let j = 0;
+            each item in innerWorks
+              +e(class="item-previews" + "_" + j data-preview=j)
+                +e("img")(src="" + item.preview alt="" + item.alt width="272" height="153").img-previews
+                +e("span").relation
+              - j++;
+        +e.navigation

@@ -1,0 +1,41 @@
+{
+  "scrollMenu" : {
+
+    "item1" : {
+      "icon" : "fence",
+      "iconWidth" : "44",
+      "iconHeight" : "34",
+      "link" : "section-features",
+      "text" : "Особенности"
+    },
+    "item2" : {
+      "icon" : "eye",
+      "iconWidth" : "35",
+      "iconHeight" : "20",
+      "link" : "visualizer",
+      "text" : "Визуализатор забора"
+    },
+    "item3" : {
+      "icon" : "money-bag",
+      "iconWidth" : "35",
+      "iconHeight" : "36",
+      "link" : "section-prices",
+      "text" : "Типовые решения и цены"
+    },
+    "item4" : {
+      "icon" : "gateway",
+      "iconWidth" : "42",
+      "iconHeight" : "30",
+      "link" : "gateway",
+      "text" : "Воротная группа"
+    },
+    "item5" : {
+      "icon" : "mail",
+      "iconWidth" : "33",
+      "iconHeight" : "33",
+      "link" : "popup-callback",
+      "text" : "Напишите нам"
+    }
+
+  }
+}

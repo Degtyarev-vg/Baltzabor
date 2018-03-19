@@ -1,0 +1,24 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang="ru").html
+  include templates/head/head
+    block head
+      - var pageTitle = "Цена забора для дачи? Посчитать!";
+
+  +page
+
+    +header(false).__header
+
+
+    +b.content.__content
+
+      +font-switch
+
+      .grid
+        +breadcrumbs(["Главная", "Калькулятор"])._top
+
+      +section-calculator
+
+
+    +footer-inner.__footer

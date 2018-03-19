@@ -1,0 +1,22 @@
+mixin inner-prices()
+  +b.inner-prices&attributes(attributes)
+    .grid
+      +b("h2").heading Стоимость установки
+      +e("p").subheading Цена монтажа зависит от материала полотна, каркаса и опорных столбов, метода установки.<br/>Предлагаем типовые базовые варианты (в качестве примера):
+      +e.list
+        - let i = 1;
+        each item in pricePackages2
+          +e.item
+            +b.inner-price-package
+              +e.top
+                +e("h3").name !{item.name}
+                +e.price !{item.price} руб.
+                +e.meter за погонный метр
+              +e("ul").parameters
+                each parameter in item.parameters
+                  +e("li").parameter= parameter
+              +e.button-container
+                +b("a")(href="#innerPackage" + i).button._red.popup-with-zoom-anim Заказать
+            +popup-price(item.name, item.oldPrice, item.price, item.parameters, null, i)(id="innerPackage" + i)
+          - i++;
+      +e.navigation

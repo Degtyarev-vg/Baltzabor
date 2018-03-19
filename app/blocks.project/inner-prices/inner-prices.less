@@ -1,0 +1,82 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/inner-prices/inner-prices.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.inner-prices {
+  padding: 12px 0;
+
+  &__subheading {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #3e3e3e;
+    margin: 15px 0 25px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    margin: 0 -15px;
+  }
+
+  &__item {
+    padding: 15px 15px 0;
+    @media (max-width: 991px) {
+      padding: 0 15px;
+    }
+    &:nth-of-type(2) {
+      margin-top: -15px;
+      @media (max-width: 991px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__navigation {
+    font-size: 0;
+    margin-top: 25px;
+    display: none;
+    @media (max-width: 991px) {
+      display: inline-block;
+    }
+  }
+
+  &__prev, &__next {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    transition: @transition;
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 19px;
+      width: 10px;
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20height%3D%2231%22%20width%3D%2217%22%20viewBox%3D%220%200%2017%2031%22%3E%3Cg%20transform%3D%22matrix(.95514%200%200%20.92036%20-.071%20-.215)%22%20fill%3D%22%23fff%22%3E%3Cdefs%3E%3Cpath%20id%3D%22a%22%20d%3D%22M.064.224h17.809V34H.064z%22%2F%3E%3C%2Fdefs%3E%3CclipPath%20id%3D%22b%22%3E%3Cuse%20height%3D%22100%25%22%20width%3D%22100%25%22%20xlink%3Ahref%3D%22%23a%22%20overflow%3D%22visible%22%2F%3E%3C%2FclipPath%3E%3Cpath%20clip-path%3D%22url(%23b)%22%20d%3D%22M.362%2032.286a.95.95%200%200%200%200%201.348.93.93%200%200%200%20.671.282c.24%200%20.487-.099.67-.282l15.89-15.882a.95.95%200%200%200%200-1.348L1.703.514a.95.95%200%200%200-1.348%200%20.95.95%200%200%200%200%201.348l15.212%2015.212zm15.205-15.212%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-size: contain;
+    }
+    &:hover {
+      background-color: #f33e2b;
+    }
+  }
+  &__prev {
+    background-color: #7f818c;
+    &:before {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+  &__next {
+    background-color: #9597a2;
+  }
+
+}
